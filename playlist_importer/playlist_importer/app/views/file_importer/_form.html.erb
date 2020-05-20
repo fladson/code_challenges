@@ -1,0 +1,12 @@
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title has-text-centered">
+        <%= form_tag({action: :import}, multipart: true) do %>
+          <%= file_field_tag 'file', accept: '.csv', required: true, class: 'button'%>
+          <%= submit_tag "Import file", class: 'button is-info' %>
+        <% end %>
+      </h1>
+    </div>
+  </div>
+</section>

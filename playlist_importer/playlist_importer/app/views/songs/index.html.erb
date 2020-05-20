@@ -1,0 +1,53 @@
+<section class="hero is-dark is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <h1 class="title">
+            Songs
+          </h1>
+        </div>
+        <div class="column is-narrow">
+          <div class="box">
+            <a href="/">Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Interpret</th>
+      <th>Album</th>
+      <th>Track</th>
+      <th>Year</th>
+      <th>Genre</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>Title</th>
+      <th>Interpret</th>
+      <th>Album</th>
+      <th>Track</th>
+      <th>Year</th>
+      <th>Genre</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    <% @songs.each do |song| %>
+      <tr>
+        <td><strong><%= song.title %></strong></td>
+        <td><%= song.interpret %></td>
+        <td><%= song.album %></td>
+        <td><%= song.track %></td>
+        <td><%= song.year %></td>
+        <td><%= song.genre %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

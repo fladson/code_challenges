@@ -1,0 +1,53 @@
+<section class="hero is-primary is-medium">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Import file
+      </h1>
+      <h2 class="subtitle">
+        Format allowed <code>.csv</code>
+      </h2>
+    </div>
+  </div>
+</section>
+<% if !empty_data? %>
+  <section class="hero is-info">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          There's already some imported data.
+        </h1>
+        <h2 class="subtitle">
+          <p>
+            <% if users_count > 0 %>
+              <%= link_to "#{users_count} already users imported", users_path %>
+            <% end %>
+          </p>
+          <p>
+            <% if playlists_count > 0 %>
+              <%= link_to "#{playlists_count} already playlists imported", playlists_path %>
+            <% end %>
+          </p>
+          <p>
+            <% if songs_count > 0 %>
+              <%= link_to "#{songs_count} already songs imported", songs_path %>
+            <% end %>
+          </p>
+        </h2>
+      </div>
+    </div>
+  </section>
+<% end %>
+<% if flash[:error] %>
+  <section class="hero is-warning">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="subtitle has-text-centered">
+          <%= flash[:error] %>
+        </h1>
+      </div>
+    </div>
+  </section>
+<% end %>
+
+<%= render 'form' %>

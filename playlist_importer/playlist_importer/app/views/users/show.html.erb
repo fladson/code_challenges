@@ -1,0 +1,52 @@
+<section class="hero is-info is-medium is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <h1 class="title">
+            <%= "#{@user.first_name + " " + @user.last_name}" %>
+          </h1>
+          <h2 class="subtitle">
+            <p><%= @user.email %></p>
+            <p><%= @user.user_name %></p>
+          </h2>
+        </div>
+        <div class="column is-narrow">
+          <div class="box">
+            <a href="/users">All users</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero is-dark">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Playlists
+      </h1>
+      <h2 class="subtitle">
+        <%= @user.playlists.size %>
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="subtitle">
+        <% @user.playlists.find_in_batches(batch_size: 9) do |group| %>
+          <nav class="breadcrumb has-dot-separator" aria-label="breadcrumbs">
+            <ul>
+            <% group.each do |playlist| %>
+              <li><%= link_to "#{playlist.name}", playlist %></li>
+            <% end %>
+            </ul>
+          </nav>
+        <% end %>
+      </h2>
+    </div>
+  </div>
+</section>

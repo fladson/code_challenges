@@ -1,0 +1,5 @@
+<div class="w-1/2 flex flex-col justify-center items-center py-8">
+  <h2>Search query: <%= @query %></h2>
+  <h2>Results: <%= @result.total_count %></h2>
+  <%= render 'repositories' %>
+</div>

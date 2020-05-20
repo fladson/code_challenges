@@ -1,0 +1,12 @@
+<div class="w-1/2 mt-8">
+  <%= form_tag search_path do %>
+    <div class="relative pull-right pl-4 pr-4">
+      <%= search_field_tag :query, nil, placeholder: 'Enter you search query here', required: true, class: "w-full rounded border focus:shadow py-2 px-2 pl-10 appearance-none leading-normal"  %>
+        <div class="absolute search-icon" style="top: 0.5rem;left: 1.75rem;">
+          <%= inline_svg "icons/search.svg" %>
+        </div>
+    </div>
+    <p></p>
+    <%= submit_tag 'Search', class: "flex mx-auto mt-8 bg-blue hover:bg-blue-dark text-white font-bold py-2 px-6 rounded hover:cursor-pointer" %>
+  <% end %>
+</div>

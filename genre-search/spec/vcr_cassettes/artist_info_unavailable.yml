@@ -1,0 +1,144 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3050/artists?id=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - content-type, authorization, content-length, x-requested-with, accept, origin
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS
+      Allow:
+      - POST, GET, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - text/plain; charset=utf-8
+      Content-Length:
+      - '21'
+      Etag:
+      - W/"15-/6VXivhc2MKdLfIkLcUE47K6aH0"
+      Date:
+      - Sun, 19 May 2019 13:16:15 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: Internal Server Error
+    http_version: 
+  recorded_at: Sun, 19 May 2019 13:16:15 GMT
+- request:
+    method: get
+    uri: http://localhost:3050/artists?id=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - content-type, authorization, content-length, x-requested-with, accept, origin
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS
+      Allow:
+      - POST, GET, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - text/plain; charset=utf-8
+      Content-Length:
+      - '21'
+      Etag:
+      - W/"15-/6VXivhc2MKdLfIkLcUE47K6aH0"
+      Date:
+      - Sun, 19 May 2019 13:16:15 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: Internal Server Error
+    http_version: 
+  recorded_at: Sun, 19 May 2019 13:16:15 GMT
+- request:
+    method: get
+    uri: http://localhost:3050/artists?id=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - content-type, authorization, content-length, x-requested-with, accept, origin
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS
+      Allow:
+      - POST, GET, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - text/plain; charset=utf-8
+      Content-Length:
+      - '21'
+      Etag:
+      - W/"15-/6VXivhc2MKdLfIkLcUE47K6aH0"
+      Date:
+      - Sun, 19 May 2019 13:16:15 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: Internal Server Error
+    http_version: 
+  recorded_at: Sun, 19 May 2019 13:16:15 GMT
+recorded_with: VCR 4.0.0

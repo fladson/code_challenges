@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Xing</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= favicon_link_tag 'favicon.ico' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          <a href="/"><strong>Xing Ruby Challenge</strong></a> by <a href="http://fladson.github.io">Fladson Gomes</a>. The source code is available at
+            <a class="icon" href="https://github.com/xing/test_ruby_playlist-fladson">
+              <i class="fa fa-github"></i>
+            </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+</html>

@@ -1,0 +1,62 @@
+<section class="hero is-dark is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <h1 class="title">
+            Users
+          </h1>
+        </div>
+        <div class="column is-narrow">
+          <div class="box">
+            <a href="/">Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<table class="table is-fullwidth">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>User name</th>
+      <th>Playlists</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>User name</th>
+      <th>Playlists</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.first_name %></td>
+        <td><%= user.last_name %></td>
+        <td><%= user.email %></td>
+        <td><%= link_to "#{user.user_name}", user %></td>
+        <td >
+          <nav class="breadcrumb has-dot-separator" aria-label="breadcrumbs">
+            <ul>
+              <% user.playlists.last(3).each do |playlist| %>
+                <li><%= link_to "#{playlist.name}", playlist %></li>
+              <% end %>
+              <% if user.playlists.size > 3 %>
+                <li><%= link_to "See more", user %></li>
+              <% end %>
+            </ul>
+          </nav>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p id="notice"><%= notice %></p>

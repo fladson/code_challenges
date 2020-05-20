@@ -1,0 +1,40 @@
+<section class="hero is-dark is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <h1 class="title">
+            Playlists
+          </h1>
+        </div>
+        <div class="column is-narrow">
+          <div class="box">
+            <a href="/">Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<table class="table is-fullwidth">
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Playlist Name</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>User</th>
+      <th>Playlist Name</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    <% @playlists.each do |playlist| %>
+      <tr>
+        <td><%= link_to "#{playlist.user.user_name}", playlist.user %></td>
+        <td><%= link_to "#{playlist.name}", playlist %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

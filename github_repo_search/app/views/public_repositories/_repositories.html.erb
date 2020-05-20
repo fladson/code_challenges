@@ -1,0 +1,5 @@
+<div class="flex flex-wrap mt-8">
+  <% @result.items.each do |repo| %>
+    <%= link_to repo.full_name, repo.html_url, class: "no-underline text-black bg-grey-lighter rounded hover:cursor-pointer hover:bg-grey-light px-4 py-4 mb-4 mr-4" %>
+  <% end %>
+</div>
